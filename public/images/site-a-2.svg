@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#1f2937"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" rx="48" fill="url(#g2)"/>
+  <rect x="80" y="90" width="1040" height="90" rx="20" fill="#ffffff" opacity="0.10"/>
+  <rect x="80" y="220" width="1040" height="150" rx="28" fill="#ffffff" opacity="0.10"/>
+  <rect x="80" y="400" width="1040" height="220" rx="28" fill="#ffffff" opacity="0.10"/>
+  <text x="110" y="145" fill="#e5e7eb" font-family="ui-sans-serif, system-ui" font-size="34" font-weight="700">Site A — Projects</text>
+  <text x="110" y="275" fill="#e5e7eb" font-family="ui-sans-serif, system-ui" font-size="22" font-weight="600">프로젝트 카드</text>
+  <text x="110" y="310" fill="#cbd5e1" font-family="ui-sans-serif, system-ui" font-size="16">목적 / 역할 / 기술 / 하이라이트로 정리</text>
+  <text x="110" y="455" fill="#e5e7eb" font-family="ui-sans-serif, system-ui" font-size="20" font-weight="600">상세 페이지에서 이미지+설명 갤러리 제공</text>
+  <text x="110" y="490" fill="#cbd5e1" font-family="ui-sans-serif, system-ui" font-size="16">사용자는 캡션으로 맥락을 바로 이해</text>
+</svg>

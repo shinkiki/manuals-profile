@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" rx="48" fill="url(#g)"/>
+  <rect x="80" y="90" width="1040" height="80" rx="20" fill="#ffffff" opacity="0.12"/>
+  <rect x="80" y="210" width="720" height="180" rx="28" fill="#ffffff" opacity="0.10"/>
+  <rect x="820" y="210" width="300" height="300" rx="28" fill="#ffffff" opacity="0.10"/>
+  <text x="110" y="145" fill="#e2e8f0" font-family="ui-sans-serif, system-ui" font-size="34" font-weight="700">Site A — Hero</text>
+  <text x="110" y="275" fill="#e2e8f0" font-family="ui-sans-serif, system-ui" font-size="26" font-weight="600">핵심 한 줄 소개</text>
+  <text x="110" y="315" fill="#cbd5e1" font-family="ui-sans-serif, system-ui" font-size="18">목적 / 기술 / 결과를 빠르게 전달하는 레이아웃</text>
+  <text x="850" y="280" fill="#e2e8f0" font-family="ui-sans-serif, system-ui" font-size="22" font-weight="600">요약 카드</text>
+  <text x="850" y="320" fill="#cbd5e1" font-family="ui-sans-serif, system-ui" font-size="16">• 유지보수 구조</text>
+  <text x="850" y="350" fill="#cbd5e1" font-family="ui-sans-serif, system-ui" font-size="16">• 다크모드</text>
+  <text x="850" y="380" fill="#cbd5e1" font-family="ui-sans-serif, system-ui" font-size="16">• 반응형</text>
+</svg>
