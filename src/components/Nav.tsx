@@ -1,5 +1,6 @@
 import Container from './Container'
 import type { ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 
 const navItems = [
   { id: 'about', label: '소개' },
@@ -53,6 +54,15 @@ export function Nav({
             >
               경력기술서
             </button>
+
+            <Link
+              to="/print"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-zinc-900 px-3 py-1.5 text-xs font-semibold text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
+            >
+              PDF
+            </Link>
           </nav>
 
           <div className="flex items-center gap-2">{right}</div>

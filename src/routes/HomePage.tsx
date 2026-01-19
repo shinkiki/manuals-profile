@@ -44,6 +44,14 @@ export default function HomePage() {
     }
     const learning: string[] = []
 
+    const notes: Record<string, typeof profile.tech> = {
+      Backend: [],
+      Frontend: [],
+      DevOps: [],
+      Mobile: [],
+      Etc: [],
+    }
+
     for (const t of profile.tech) {
       if (t.level === 'main') {
         main.push(t.name)
@@ -56,9 +64,16 @@ export default function HomePage() {
         if (!used[key]) used[key] = []
         used[key].push(t.name)
       }
+
+      if (t.note) {
+        const cat = t.category || 'Etc'
+        const key = cat.charAt(0).toUpperCase() + cat.slice(1)
+        if (!notes[key]) notes[key] = []
+        notes[key].push(t)
+      }
     }
 
-    return { main, used, learning }
+    return { main, used, learning, notes }
   }, [])
 
   // Nav에서 state로 전달된 스크롤 요청 처리
@@ -231,18 +246,33 @@ export default function HomePage() {
 
           <div className="mt-6 rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
             <h3 className="text-base font-semibold">노트</h3>
-            <ul className="mt-3 grid gap-2 text-sm text-zinc-700 dark:text-zinc-200 sm:grid-cols-2">
-              {profile.tech
-                .filter((t) => t.note)
-                .map((t) => (
-                  <li key={t.name} className="flex gap-2">
-                    <span className="min-w-0">
-                      <b className="font-semibold">{t.name}</b>
-                      <span className="text-zinc-600 dark:text-zinc-300"> — {t.note}</span>
-                    </span>
-                  </li>
-                ))}
-            </ul>
+            <div className="mt-4 flex flex-col gap-4">
+              {Object.entries(techGroups.notes)
+                .sort(([keyA], [keyB]) => {
+                  if (keyA === 'Etc') return 1
+                  if (keyB === 'Etc') return -1
+                  return 0
+                })
+                .map(([category, items]) => {
+                  if (items.length === 0) return null
+                  return (
+                    <div key={category} className="rounded-xl border border-zinc-100 bg-zinc-50/50 p-4 dark:border-zinc-800 dark:bg-zinc-900/50">
+                      <h4 className="mb-3 text-xs font-semibold text-zinc-500">{category}</h4>
+                      <ul className="grid gap-x-6 gap-y-4 sm:grid-cols-2">
+                        {items.map((t) => (
+                          <li key={t.name} className="flex flex-col gap-1 text-sm">
+                            <b className="font-semibold text-zinc-900 dark:text-zinc-100">{t.name}</b>
+                            <span className="leading-relaxed text-zinc-600 dark:text-zinc-300">{t.note}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )
+                })}
+            </div>
+            {Object.keys(techGroups.notes).length === 0 ? (
+              <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">표시할 노트가 없습니다.</p>
+            ) : null}
           </div>
         </Section>
 
@@ -255,7 +285,14 @@ export default function HomePage() {
               >
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="flex flex-col p-6">
-                    <h3 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">{p.title}</h3>
+                    <h3 className="flex items-center gap-2 text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+                      {p.title}
+                      {p.status === 'in-progress' && (
+                        <span className="inline-flex items-center rounded-md bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-500 ring-1 ring-inset ring-yellow-400/20 dark:text-yellow-400">
+                          진행중
+                        </span>
+                      )}
+                    </h3>
                     <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{p.oneLiner}</p>
 
                     <div className="mt-6 space-y-4">

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://<USERNAME>.github.io/<REPO>",
+  "homepage": "https://shinkiki.github.io/manuals-profile",
   "scripts": {
     "dev": "vite",
     "build": "tsc -p tsconfig.json --noEmit && vite build",

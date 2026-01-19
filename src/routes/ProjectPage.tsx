@@ -56,7 +56,14 @@ export default function ProjectPage() {
             </Link>
           </div>
 
-          <h1 className="mt-6 text-3xl font-semibold tracking-tight sm:text-4xl">{project.title}</h1>
+          <h1 className="mt-6 flex items-center gap-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+            {project.title}
+            {project.status === 'in-progress' && (
+              <span className="inline-flex items-center rounded-md bg-yellow-400/10 px-2.5 py-1 text-sm font-medium text-yellow-500 ring-1 ring-inset ring-yellow-400/20 dark:text-yellow-400">
+                진행중
+              </span>
+            )}
+          </h1>
           <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">{project.oneLiner}</p>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
