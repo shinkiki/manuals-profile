@@ -96,9 +96,9 @@ export const profile: ProfileData = {
     { name: 'Jenkins', level: 'used', category: 'devops', note: '지속적 통합 및 배포 환경 구축에 사용' },
     { name: 'Nginx', level: 'used', category: 'devops', note: '리버스 프록시 및 웹 서버 운영에 사용' },
     { name: 'Caddy', level: 'used', category: 'devops', note: '간편한 HTTPS 설정 및 웹 서버 운영에 사용' },
-    { name: 'Vibe Coding', level: 'learning', category: 'etc', note: '효율적인 코딩 습관과 방법론 학습중' },
+    { name: 'Vibe Coding', level: 'learning', category: 'etc', note: 'LLM을 이용한 바이브 코딩 활용중' },
     { name: 'Vector Database', level: 'learning', category: 'backend', note: 'LLM 및 검색 엔진 고도화를 위한 벡터 DB 활용법 학습중' },
-    { name: 'Artificial Intelligence', level: 'learning', category: 'etc', note: 'AI 모델의 기본 원리와 서비스 적용 방안 공부중' },
+    { name: 'Artificial Intelligence', level: 'learning', category: 'etc', note: 'AI 모델의 기본 원리와 서비스 적용 방안 학습중' },
     { name: 'Thymeleaf', level: 'used', category: 'frontend', note: '서버 사이드 렌더링을 위한 템플릿 엔진으로 사용' },
     { name: 'M365 Graph API', level: 'used', category: 'backend', note: 'Microsoft 365 데이터 및 서비스 연동을 위해 사용' },
     { name: 'Kakao API', level: 'used', category: 'backend', note: '카카오 소셜 로그인 및 서비스 연동에 사용' },
@@ -115,6 +115,7 @@ export const profile: ProfileData = {
     { name: 'Vue.js', level: 'used', category: 'frontend', note: '반응형 웹 사용자 인터페이스 개발' },
     { name: 'Nexacro', level: 'used', category: 'frontend', note: '엔터프라이즈 UI/UX 플랫폼 개발' },
     { name: 'JSP', level: 'used', category: 'frontend', note: '서버 사이드 렌더링 및 레거시 시스템 화면 개발' },
+    { name: 'Elasticsearch', level: 'learning', category: 'etc', note: '검색 엔진 및 대용량 데이터 분석 기술 학습중' },
 
 
   ],
@@ -152,8 +153,10 @@ export const profile: ProfileData = {
       title: '메타데이터 관리 시스템',
       oneLiner: '브로젝트별 용어·단어·도메인 메타데이터를 관리하는 운영 도구',
       purpose: [
-        '신규 프로젝트를 진행할때 메타데이터를 관리하면 생각보다 많은 장점이 있습니다.',
-        '정합성 향상이라는 기본적인 장점도 있겠지만 제가 생각한 장점은 개발을 진행 할수록 도메인의 메타정보가 쌓이게 되면 변수명, 타입등을 생각하느라 시간을 낭비하지 않아 개발기간이 단축되고 코드의 퀄리티도 향상됩니다.',
+        '신규 프로젝트 진행시 메타데이터 정의를 통해 개발자의 변수명, 타입 등 고민시간 단축으로 개발기간 단축',
+        '코드 품질 향상: 메타데이터를 통한 일관성 있는 코드 작성',
+        '런타임 API 관리 서비스 구현',
+        '런타임 이벤트 관리 서비스 구현'
       ],
       role:
         '도메인 주도 개발(Domain-Driven Development), 레이어드 아키텍처 설계(SB3.5 + Clean Architecture), 백엔드(OAuth2 AS/도메인 모델링/REST API), 프론트엔드(권한 게이트/그리드/Excel UX), 품질(테스트/문서/CI)까지 End-to-End로 개발',
@@ -234,7 +237,8 @@ export const profile: ProfileData = {
       title: '복지의 숲 (Welfare Forest)',
       oneLiner: '맞춤형 복지 추천과 관리자 운영을 위한 사용자 앱 + 관리자 콘솔 + 모바일 앱 패키징',
       purpose:
-        '사용자에게는 빠르고 쉬운 복지 탐색 경험을, 운영자에게는 동기화/통계/관리 기능을 제공하는 서비스(웹+모바일)를 구축',
+        ['디지털 정보 취약자도 국가에서 제공하는 복지를 손쉽게 이용할 수 있도록 맞춤형 복지 추천 서비스 구축',
+          '동기화/통계/관리 Admin 서비스 제공', '모바일 앱 패키징'],
       role:
         'React 19 + TS + Vite 기반 사용자 앱/관리자 콘솔 UI 개발, 디자인 시스템 구축, Capacitor 기반 앱 패키징, 백엔드 연계 및 배포 자동화 파이프라인 구성',
       tech: [
@@ -297,7 +301,8 @@ export const profile: ProfileData = {
       slug: 'groupware-msa',
       title: '매뉴얼 - 멀티테넌트 SaaS 그룹웨어',
       oneLiner: 'Event-driven MSA 기반의 멀티테넌트 SaaS 그룹웨어 플랫폼',
-      purpose: '다양한 조직이 하나의 플랫폼에서 독립적인 데이터와 서비스를 이용할 수 있도록 설계된 분산 시스템. MSA 아키텍처를 도입하여 서비스 간 결합도를 낮춤, Kafka를 활용한 이벤트 기반 통신으로 확장성과 실시간성 확보',
+      purpose: ['다양한 조직이 하나의 플랫폼에서 독립적인 데이터와 서비스를 이용할 수 있도록 설계된 분산 시스템',
+        'MSA 아키텍처를 도입하여 서비스 간 결합도를 낮춤', 'Kafka를 활용한 이벤트 기반 통신으로 확장성과 실시간성 확보'],
       role: 'MSA 아키텍처(API Gateway, Discovery, Config) 및 이벤트 기반 시스템 설계, Spring Boot 3.4 + Java 21 기반 핵심 마이크로서비스(User, Approval, Board) 구현, Vue 3 프론트엔드 개발 및 Kafka 데이터 파이프라인 구축',
       tech: [
         'Java 21', 'Spring Boot 3.4', 'Kafka (KRaft)', 'PostgreSQL', 'Redis',
@@ -340,7 +345,8 @@ export const profile: ProfileData = {
       slug: 'keycloak-user-manager',
       title: 'Manuals Keycloak User Manager',
       oneLiner: 'Keycloak 기반의 사용자 및 권한 관리(IAM) 거버넌스 플랫폼',
-      purpose: 'Keycloak의 복잡한 관리 기능을 비즈니스 요구사항에 맞춰 단순화하고, 사용자/그룹/역할(RBAC) 관리 및 리소스 기반 권한 제어(Authorization)를 효율적으로 수행하기 위한 레퍼런스 구현체',
+      purpose: ['Keycloak의 복잡한 관리 기능을 비즈니스 요구사항에 맞춰 단순화',
+        '사용자/그룹/역할(RBAC) 관리 및 리소스 기반 권한 제어(Authorization)를 효율적으로 수행하기 위한 레퍼런스 구현체'],
       role: 'Keycloak Admin Client 연동 설계, Spring Boot 기반 Admin API 및 보안 아키텍처 수립, Vue 3 관리자 UI 개발 및 Docker 통합 배포 환경 구축',
       tech: [
         'Java 21', 'Spring Boot 3.4', 'Keycloak 26', 'PostgreSQL',
