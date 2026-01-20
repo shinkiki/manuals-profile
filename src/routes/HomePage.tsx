@@ -288,7 +288,7 @@ export default function HomePage() {
                     <h3 className="flex items-center gap-2 text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
                       {p.title}
                       {p.status === 'in-progress' && (
-                        <span className="inline-flex items-center rounded-md bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-500 ring-1 ring-inset ring-yellow-400/20 dark:text-yellow-400">
+                        <span className="inline-flex items-center whitespace-nowrap rounded-md bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-500 ring-1 ring-inset ring-yellow-400/20 dark:text-yellow-400">
                           진행중
                         </span>
                       )}

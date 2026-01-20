@@ -156,7 +156,7 @@ export default function CareerPage() {
             <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
               재직 구간별로 진행 프로젝트를 모아봤습니다. 제목을 클릭하면 아래 상세로 이동합니다.
             </p>
-            <div className="mt-4 grid grid-flow-col auto-cols-fr gap-4">
+            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-flow-col sm:auto-cols-fr">
               {phaseCards.map(({ phase, entries, byCompany, companyOrder }) => {
                 const multiCompany = companyOrder.length > 1
                 return (
