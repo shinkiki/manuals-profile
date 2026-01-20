@@ -69,7 +69,7 @@ export const profile: ProfileData = {
     '또한 프로젝트를 함께 수행한 동료들과는 종료 이후에도 계속 연락을 주고받고 모임을 가질 정도로, 함께 어울리고 협력하는 문화를 중요하게 생각합니다. 팀원들과의 신뢰와 유대감을 바탕으로 더 좋은 결과를 만들어내는 과정에서 큰 보람을 느낍니다.',
   ],
   goals: [
-    '<b>바이브코딩을 즐겨하는 17년차 프로그래머</b>',
+    '<b>코딩이 취미인 17년차 프로그래머</b>',
     '즐겁게 일하는 것이 중요하다고 생각함',
     '기획을 구체화 하는 과정과 문제를 해결하는 과정을 즐김',
     '경험을 통해 얻은 지식을 동료들과 공유하는 것을 좋아함',
@@ -107,6 +107,14 @@ export const profile: ProfileData = {
     { name: 'OAuth 2.0', level: 'used', category: 'backend', note: '표준 인증 프로토콜을 통한 보안 인증 체계 구축에 사용' },
     { name: 'Keycloak', level: 'used', category: 'backend', note: '오픈소스 인증 및 액세스 제어 솔루션을 통한 통합 인증 환경 구축에 사용' },
     { name: 'Kafka', level: 'used', category: 'backend', note: '대용량 메시지 스트리밍 및 이벤트 기반 아키텍처 구현에 사용' },
+    { name: 'Git', level: 'main', category: 'devops', note: '분산 버전 관리 시스템으로 소스 코드 이력 관리' },
+    { name: 'PL/SQL', level: 'main', category: 'backend', note: '데이터베이스 저장 프로시저 및 함수 작성' },
+    { name: 'Subversion', level: 'used', category: 'devops', note: '중앙 집중식 버전 관리 시스템 사용 경험' },
+    { name: 'HTML', level: 'main', category: 'frontend', note: '웹 표준 마크업 및 구조 설계' },
+    { name: 'MariaDB', level: 'used', category: 'backend', note: '오픈소스 관계형 데이터베이스 관리 시스템 활용' },
+    { name: 'MySQL', level: 'used', category: 'backend', note: '웹 서비스 백엔드 데이터베이스로 활용' },
+    { name: 'Vue.js', level: 'used', category: 'frontend', note: '반응형 웹 사용자 인터페이스 개발' },
+    { name: 'Nexacro', level: 'used', category: 'frontend', note: '엔터프라이즈 UI/UX 플랫폼 개발' },
 
 
   ],
@@ -116,7 +124,7 @@ export const profile: ProfileData = {
       title: '포트폴리오 / 프로필 사이트 (이 프로젝트)',
       oneLiner: '경력·프로젝트·자기소개를 구조화해 보여주는 정적 배포형 포트폴리오 사이트',
       purpose:
-        '제가 만든 서비스들의 “목적/기술/개선점”과 경력 프로젝트를 한 곳에 정리하고, GitHub Pages 같은 정적 호스팅 환경에서도 안정적으로 탐색할 수 있는 포트폴리오를 만들었습니다.',
+        '제가 만든 서비스들의 “목적/기술”과 경력 프로젝트를 한 곳에 정리하고, GitHub Pages 같은 정적 호스팅 환경에서도 안정적으로 탐색할 수 있는 포트폴리오를 만들었습니다.',
       role:
         '정보 구조 설계, UI/UX(타임라인/목차/모달), 데이터 모델링(profile/career 분리), 라우팅/배포 설정까지 전반을 구현했습니다.',
       tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Router (HashRouter)', 'GitHub Pages'],
@@ -148,7 +156,7 @@ export const profile: ProfileData = {
         '정합성 향상이라는 기본적인 장점도 있겠지만 제가 생각한 장점은 개발을 진행 할수록 도메인의 메타정보가 쌓이게 되면 변수명, 타입등을 생각하느라 시간을 낭비하지 않아 개발기간이 단축되고 코드의 퀄리티도 향상됩니다.',
       ],
       role:
-        '도메인 주도 개발(Domain-Driven Development), 레이어드 아키텍처 설계(SB3.5 + Clean Architecture), 백엔드(OAuth2 AS/도메인 모델링/REST API), 프론트엔드(권한 게이트/그리드/Excel UX), 품질(테스트/문서/CI)까지 End-to-End로 수행했습니다.',
+        '도메인 주도 개발(Domain-Driven Development), 레이어드 아키텍처 설계(SB3.5 + Clean Architecture), 백엔드(OAuth2 AS/도메인 모델링/REST API), 프론트엔드(권한 게이트/그리드/Excel UX), 품질(테스트/문서/CI)까지 End-to-End로 개발',
       tech: [
         'Java 21',
         'Spring Boot 3.5',
@@ -226,9 +234,9 @@ export const profile: ProfileData = {
       title: '복지의 숲 (Welfare Forest)',
       oneLiner: '맞춤형 복지 추천과 관리자 운영을 위한 사용자 앱 + 관리자 콘솔 + 모바일 앱 패키징',
       purpose:
-        '사용자에게는 빠르고 쉬운 복지 탐색 경험을, 운영자에게는 동기화/통계/관리 기능을 제공하는 서비스(웹+모바일)를 구축했습니다.',
+        '사용자에게는 빠르고 쉬운 복지 탐색 경험을, 운영자에게는 동기화/통계/관리 기능을 제공하는 서비스(웹+모바일)를 구축',
       role:
-        'React 19 + TS + Vite 기반 사용자 앱/관리자 콘솔 UI 개발, 디자인 시스템 구축, Capacitor 기반 앱 패키징, 백엔드 연계 및 배포 자동화 파이프라인 구성에 참여했습니다.',
+        'React 19 + TS + Vite 기반 사용자 앱/관리자 콘솔 UI 개발, 디자인 시스템 구축, Capacitor 기반 앱 패키징, 백엔드 연계 및 배포 자동화 파이프라인 구성',
       tech: [
         'React 19',
         'TypeScript',
@@ -289,8 +297,8 @@ export const profile: ProfileData = {
       slug: 'groupware-msa',
       title: '매뉴얼 - 멀티테넌트 SaaS 그룹웨어',
       oneLiner: 'Event-driven MSA 기반의 멀티테넌트 SaaS 그룹웨어 플랫폼',
-      purpose: '다양한 조직이 하나의 플랫폼에서 독립적인 데이터와 서비스를 이용할 수 있도록 설계된 분산 시스템입니다. MSA 아키텍처를 도입하여 서비스 간 결합도를 낮추고, Kafka를 활용한 이벤트 기반 통신으로 확장성과 실시간성을 확보했습니다.',
-      role: 'MSA 아키텍처(API Gateway, Discovery, Config) 및 이벤트 기반 시스템 설계, Spring Boot 3.4 + Java 21 기반 핵심 마이크로서비스(User, Approval, Board) 구현, Vue 3 프론트엔드 개발 및 Kafka 데이터 파이프라인 구축을 전담했습니다.',
+      purpose: '다양한 조직이 하나의 플랫폼에서 독립적인 데이터와 서비스를 이용할 수 있도록 설계된 분산 시스템. MSA 아키텍처를 도입하여 서비스 간 결합도를 낮춤, Kafka를 활용한 이벤트 기반 통신으로 확장성과 실시간성 확보',
+      role: 'MSA 아키텍처(API Gateway, Discovery, Config) 및 이벤트 기반 시스템 설계, Spring Boot 3.4 + Java 21 기반 핵심 마이크로서비스(User, Approval, Board) 구현, Vue 3 프론트엔드 개발 및 Kafka 데이터 파이프라인 구축',
       tech: [
         'Java 21', 'Spring Boot 3.4', 'Kafka (KRaft)', 'PostgreSQL', 'Redis',
         'JPA', 'jOOQ', 'Vue 3', 'TypeScript', 'Tailwind CSS', 'Docker', 'Nginx'
@@ -332,8 +340,8 @@ export const profile: ProfileData = {
       slug: 'keycloak-user-manager',
       title: 'Manuals Keycloak User Manager',
       oneLiner: 'Keycloak 기반의 사용자 및 권한 관리(IAM) 거버넌스 플랫폼',
-      purpose: 'Keycloak의 복잡한 관리 기능을 비즈니스 요구사항에 맞춰 단순화하고, 사용자/그룹/역할(RBAC) 관리 및 리소스 기반 권한 제어(Authorization)를 효율적으로 수행하기 위한 레퍼런스 구현체입니다.',
-      role: 'Keycloak Admin Client 연동 설계, Spring Boot 기반 Admin API 및 보안 아키텍처 수립, Vue 3 관리자 UI 개발 및 Docker 통합 배포 환경 구축을 수행했습니다.',
+      purpose: 'Keycloak의 복잡한 관리 기능을 비즈니스 요구사항에 맞춰 단순화하고, 사용자/그룹/역할(RBAC) 관리 및 리소스 기반 권한 제어(Authorization)를 효율적으로 수행하기 위한 레퍼런스 구현체',
+      role: 'Keycloak Admin Client 연동 설계, Spring Boot 기반 Admin API 및 보안 아키텍처 수립, Vue 3 관리자 UI 개발 및 Docker 통합 배포 환경 구축',
       tech: [
         'Java 21', 'Spring Boot 3.4', 'Keycloak 26', 'PostgreSQL',
         'Vue 3', 'TypeScript', 'PrimeVue', 'Vite', 'Docker', 'Nginx'
