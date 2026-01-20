@@ -179,8 +179,8 @@ export default function HomePage() {
               <div className="rounded-2xl border border-zinc-200 bg-white p-6 sm:col-span-2 dark:border-zinc-800 dark:bg-zinc-900">
                 <h3 className="text-base font-semibold">자기소개</h3>
                 <div className="mt-4 space-y-4 text-sm leading-relaxed text-zinc-700 dark:text-zinc-200">
-                  {profile.selfIntroduction.map((p) => (
-                    <p key={p}>{p}</p>
+                  {profile.selfIntroduction.map((p, idx) => (
+                    <p key={idx} dangerouslySetInnerHTML={{ __html: p }} />
                   ))}
                 </div>
               </div>

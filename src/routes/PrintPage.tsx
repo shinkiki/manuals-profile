@@ -40,7 +40,7 @@ export default function PrintPage() {
                 </p>
                 {profile.selfIntroduction && (
                     <div className="mt-3 space-y-2 text-sm leading-relaxed text-zinc-700">
-                        {profile.selfIntroduction.map((p, i) => <p key={i}>{p}</p>)}
+                        {profile.selfIntroduction.map((p, i) => <p key={i} dangerouslySetInnerHTML={{ __html: p }} />)}
                     </div>
                 )}
             </section>
