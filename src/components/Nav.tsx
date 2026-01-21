@@ -92,7 +92,7 @@ export function Nav({
 
         {/* Mobile Nav Overlay */}
         {isOpen && (
-          <nav className="border-t border-zinc-200 px-2 py-4 sm:hidden dark:border-zinc-800">
+          <nav className="absolute left-0 top-full w-full border-b border-zinc-200 bg-zinc-50/95 px-2 py-4 shadow-lg backdrop-blur-sm sm:hidden dark:border-zinc-800 dark:bg-zinc-950/95">
             <ul className="flex flex-col gap-2">
               {navItems.map((i) => (
                 <li key={i.id}>

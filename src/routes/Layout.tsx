@@ -7,7 +7,17 @@ import { ScrollToTopButton } from '../components/ScrollToTopButton'
 function scrollToSection(id: string) {
   const el = document.getElementById(id)
   if (!el) return
-  el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  // 헤더 높이(약 56px) + 여백(24px) 고려하여 오프셋 설정
+  const offset = 80
+  const bodyRect = document.body.getBoundingClientRect().top
+  const elementRect = el.getBoundingClientRect().top
+  const elementPosition = elementRect - bodyRect
+  const offsetPosition = elementPosition - offset
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: 'smooth',
+  })
 }
 
 export default function Layout() {
