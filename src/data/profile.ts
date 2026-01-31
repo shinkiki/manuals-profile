@@ -35,6 +35,7 @@ export type ProfileData = {
   jobTitle?: string
   headline: string
   intro: string
+  birthdate?: string
   avatar?: {
     src: string
     alt: string
@@ -45,12 +46,19 @@ export type ProfileData = {
   projects: ProjectItem[]
   contact: {
     email?: string
+    phone?: string
+    address?: string
     github?: string
     blog?: string
     linkedin?: string
   }
   sitePurpose?: string
   techStandards?: string[]
+  encryptedData?: {
+    birthdate: string
+    phone: string
+    address: string
+  }
 }
 
 export const profile: ProfileData = {
@@ -395,4 +403,9 @@ export const profile: ProfileData = {
     '• 애자일 방법론을 통해 효율적인 개발을 추구합니다.',
     '• 정리되지 않은 지식은 지식이 될 수 없다고 생각합니다.',
   ],
+  encryptedData: {
+    birthdate: 'U2FsdGVkX1/1M5Dsd5XI+cTtSY+771n+sp30QA2d4IQ=',
+    phone: 'U2FsdGVkX1+B6NdDX2mpMbqToNxoNWqF0qsUKdfehRM=',
+    address: 'U2FsdGVkX193uFqZgzpTk27tEJPFNeL0fzesy5imzLFFeDzKmmLAXZWvp8nrhTbRPQQea4LA2UZBWVd17WGCEA==',
+  },
 }
