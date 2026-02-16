@@ -157,6 +157,73 @@ export const profile: ProfileData = {
       ],
     },
     {
+      slug: 'money-note',
+      title: 'Money Note (가계부)',
+      oneLiner: '개인 자산, 부채, 지출, 부동산, 저축 현황을 한눈에 파악하고 관리하는 반응형 웹 애플리케이션',
+      purpose: [
+        '흩어져 있는 개인의 자산 정보를 통합 관리하고, 직관적인 대시보드를 통해 재정 상태를 시각화하여 체계적인 자산 관리를 돕기 위해 개발하였습니다.',
+        '자산 증감 추이와 소비 패턴을 분석하여 보다 나은 재무 의사결정을 내릴 수 있도록 지원합니다.',
+      ],
+      role: '기획, UI/UX 디자인, 프론트엔드 개발(Vue 3, Naive UI) 및 Express API 서버 구축',
+      tech: ['Vue 3', 'TypeScript', 'Vite', 'Naive UI', 'Pinia', 'Chart.js', 'Express', 'SQLite'],
+      highlights: [
+        '가족 단위의 자산/가계부 공유 기능 및 권한 관리',
+        '순자산, 수입/지출, 카테고리별 통계 등 다양한 대시보드 시각화',
+        '데이터 그리드, 카드형, 차트형 등 다양한 통계 보드 제공',
+        '적금, 부동산, 부채 등 다양한 자산 유형 관리',
+        'JWT 기반 인증 및 토큰 자동 갱신 처리를 통한 보안 강화',
+      ],
+      images: [
+        {
+          src: 'images/money-note/dashboard.png',
+          alt: 'Money Note 대시보드',
+          caption: '메인 대시보드 — 순자산 목표 달성률 및 월별 수입/지출 통계',
+        },
+        {
+          src: 'images/money-note/expenses.png',
+          alt: '자산 관리',
+          caption: '자산 관리 — 적금, 부동산, 부채 현황 및 상세 정보 관리',
+        },
+      ],
+      links: [
+        { label: 'Live', href: 'https://money-note.manuals.co.kr', details: '체험계정: demo.com / demo' },
+      ],
+    },
+    {
+      slug: 'editor',
+      title: 'Manuals Editor (웹 에디터)',
+      oneLiner: 'Tiptap 기반의 Vue 3 전용 재사용 가능한 문서 에디터 컴포넌트 라이브러리',
+      purpose: [
+        '기존 위지윅 에디터의 한계를 넘어, 문서의 구조적 편집과 DOM 컨트롤(Input, Select 등) 삽입이 가능한 에디터를 개발하였습니다.',
+        '엑셀/오피스 문서 붙여넣기 시 서식 깨짐 문제를 해결하고, 관리자가 에디터 기능을 세부적으로 제어할 수 있는 환경을 제공합니다.',
+      ],
+      role: '라이브러리 설계 및 개발, NPM 배포(예정), Tiptap 커스텀 확장(Extension) 개발',
+      tech: ['Vue 3', 'TypeScript', 'Tiptap', 'Vite', 'NPM Package', 'Tailwind CSS'],
+      highlights: [
+        'Office/Excel 붙여넣기 보정: HTML 구조 유지 및 이미지/텍스트 선택 붙여넣기 지원',
+        'DOM 컨트롤 삽입: Input, Select, Checkbox 등 폼 요소 삽입 및 속성 편집 기능',
+        '관리자 제어 시스템: 사용자/그룹별 에디터 기능(툴바 버튼, 단축키 등) On/Off 설정',
+        '이미지 업로드 및 크기 조절: 드래그 앤 드롭, 리사이즈(%, px, 비율 유지) 지원',
+        '전체화면 편집 및 미리보기 패널 제공',
+      ],
+      images: [
+        {
+          src: 'images/editor/main.png',
+          alt: '에디터 메인',
+          caption: '기본 에디터 화면 — 툴바 구조 및 기본 편집 기능',
+        },
+        {
+          src: 'images/editor/settings.png',
+          alt: '에디터 설정',
+          caption: '관리자 설정 — 기능별 사용 여부 제어',
+        },
+      ],
+      links: [
+        { label: 'NPM(예정)', href: 'https://www.npmjs.com/package/@shinkiki/manuals-editor' },
+      ],
+      status: 'in-progress',
+    },
+    {
       slug: 'meta',
       title: '메타데이터 관리 시스템',
       oneLiner: '브로젝트별 용어·단어·도메인 메타데이터를 관리하는 운영 도구',
