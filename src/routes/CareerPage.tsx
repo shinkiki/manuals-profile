@@ -27,8 +27,7 @@ const timeline: TimelinePhase[] = [
   { label: '시작', period: '2002.03 ~ 2012.12' },
   { label: '타임소프트', period: '2013.03 ~ 2018.12' },
   { label: '프리랜서', period: '2019.01 ~ 2022.04' },
-  { label: 'GSITM', period: '2022.04 ~ 2025.02' },
-  { label: 'GS비즈플', period: '2025.02 ~ 현재', current: true },
+  { label: 'GSITM', period: '2022.04 ~ 현재', current: true },
 ]
 
 // 타임라인 구간(재직 형태)과 실제 프로젝트 회사명을 연결합니다.
@@ -37,8 +36,7 @@ const phaseToCompanies: Record<string, string[]> = {
   시작: ['한국교육과정평가원', 'COMNEX', '레코피스'],
   타임소프트: ['타임소프트'],
   프리랜서: ['삼정회계법인', 'IBK시스템'],
-  GSITM: ['에치와이', 'GS리테일'],
-  GS비즈플: ['GS비즈플'],
+  GSITM: ['GSITM', '에치와이', 'GS리테일'],
 }
 
 function scrollToId(id: string) {
